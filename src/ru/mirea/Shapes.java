@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Shapes extends JPanel {
-    private List<Shapes> shapes = new ArrayList<>();//Тут было Object
+    private List<Shape> shapes = new ArrayList<>();//Тут было Object
     private Random random = new Random();
     private int width = 700, height = 700;
 
@@ -28,7 +28,7 @@ public class Shapes extends JPanel {
 
     protected void paintComponent(Graphics g) {
         super.paintComponents(g);
-        for (Shapes s : shapes) { //Тут было Object
+        for (Shape s : shapes) { //Тут было Object
             if (s instanceof Oval) {
                 ((Oval) s).draw(g);
             } else if (s instanceof Rectangle) {
